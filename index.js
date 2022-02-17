@@ -1,8 +1,8 @@
 const calculate = document.getElementById('calculate-btn');
 
-function onclick (firstBalance,secondBalance){
-    firstBalance < secondBalance    
-
+function getId(catchId) {
+    document.getElementById(catchId)
+    
 }
 
 
@@ -32,36 +32,6 @@ calculate.addEventListener('click', function () {
     const total =food + myRent + clothes;
     const restBalance = income - total;
     // error 
-
-    //=======alert message 1=========
-    if (income < total) {
-        alert("Hey,Don't cross your Budget🐸");
-
-    } else {
-        const balance = document.getElementById('balance');
-        balance.innerText = restBalance;
-        document.getElementById('total-expense').innerText = total;
-    }
-})
-
-// savings part 
-
-const saveBtn = document.getElementById('save')
-saveBtn.addEventListener('click', function () {
-    const percentages = document.getElementById('percentage').value;
-    const income = document.getElementById('income').value;
-    const savings = (income * percentages) / 100;
-    // const finalsavings = income - savings;
-    // console.log(finalsavings);
-    const leftBalance = balance.innerText;
-    const remaingBalance = document.getElementById('reamianing-balance');
-
-    //=======alert message 2=========
-
-    if (leftBalance < savings) {
-        alert("You cross your expenses,and savings is not possible");
-    } else {
-        document.getElementById('save-amount').innerText = savings;
-        remaingBalance.innerText = leftBalance - savings;
-    }
+// ===============
+  
 })
