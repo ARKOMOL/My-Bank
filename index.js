@@ -17,7 +17,7 @@ calculate.addEventListener('click', function () {
     const myRent = parseFloat(rentValue);
     const clothes = parseFloat(clotheValue);
 
-    //  empty string and minus number error 
+    //=======Minus number error=======
     if (
         food < 0 ||
         myRent < 0 ||
@@ -25,17 +25,16 @@ calculate.addEventListener('click', function () {
         income < 0) {
         alert('Empty input or minus number is not allowed')
     };
-   // numbre error 
+   //=======numbre error=========== 
     if (isNaN(food) || isNaN(myRent) || isNaN(clothes) || isNaN(income) === true) {
         alert('Enter a valid number')
     }
         // total balance left 
     const total = food + myRent + clothes;
     const restBalance = income - total;
-    // error 
-    // ===============
+
     //=======alert message 1=========
-    // if (income < total)
+   
     if(leftcash(income,total)) {
         alert("Hey,Don't cross your Budget🐸");
 
@@ -45,7 +44,8 @@ calculate.addEventListener('click', function () {
         document.getElementById('total-expense').innerText = total;
     }
 })
-// savings part 
+//=======savings part=======
+
 const saveBtn = document.getElementById('save')
 saveBtn.addEventListener('click', function () {
     const percentages = document.getElementById('percentage').value;
@@ -56,7 +56,6 @@ saveBtn.addEventListener('click', function () {
 
     //=======alert message 2=========
 
-    // if (leftBalance < savings) 
     if(leftcash(leftBalance,savings))
     {
         alert("You cross your expenses,and savings is not possible");
