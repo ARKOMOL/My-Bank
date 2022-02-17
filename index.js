@@ -33,5 +33,18 @@ calculate.addEventListener('click', function () {
     const restBalance = income - total;
     // error 
 // ===============
-  
+    //=======alert message 1=========
+    if (income < total) {
+        alert("Hey,Don't cross your Budget🐸");
+
+    } else {
+        const balance = document.getElementById('balance');
+        balance.innerText = restBalance;
+        document.getElementById('total-expense').innerText = total;
+    }
+
+
+
+
+
 })
